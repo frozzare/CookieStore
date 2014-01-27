@@ -4,7 +4,7 @@ This is not for production, had an idea I wanted to try with cookies in .NET
 
 ## Example
 
-```
+```c#
 var nea = new Nea();
 
 // Create a new user.
