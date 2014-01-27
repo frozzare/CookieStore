@@ -1,6 +1,6 @@
 # Nea
 
-This is not for production, had an idea I wanted to try with cookies in .NET
+Had an idea I wanted to try with cookies in C#, *not for production use.*
 
 ## Example
 
