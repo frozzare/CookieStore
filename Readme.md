@@ -27,5 +27,5 @@ user = nea.Get<User>();
 // Output the result.
 Response.Write(user.Name + " has id " + user.Id);
 
-// Eleonor has id 1
+// Output: Eleonor has id 1
 ```
