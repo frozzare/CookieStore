@@ -5,6 +5,12 @@ Had an idea I wanted to try with cookies in C#, *not for production use.*
 ## Example
 
 ```c#
+public class User
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+
 var nea = new Nea();
 
 // Create a new user.
