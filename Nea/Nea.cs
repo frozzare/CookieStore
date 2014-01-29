@@ -29,24 +29,24 @@ namespace Nea
         /// <returns>Instance of the class with values if the cookie exists.</returns>
         public T Get <T>() where T : new()
         {
-            var klass = new T();
-            var klassType = klass.GetType();
-            var cookie = HttpContext.Current.Request.Cookies[klass.GetType().Name];
+            var obj = new T();
+            var objType = obj.GetType();
+            var cookie = HttpContext.Current.Request.Cookies[objType.Name];
 
             if (cookie == null || cookie.Values.Count <= 0)
             {
-                return klass;
+                return obj;
             }
 
-            foreach (var key in cookie.Values.Cast<string>().Where(key => klassType.GetProperty(key) != null))
+            foreach (var key in cookie.Values.Cast<string>().Where(key => objType.GetProperty(key) != null))
             {
-                var property = klassType.GetProperty(key);
+                var prop = objType.GetProperty(key);
                 object value = cookie.Values[key];
-                value = Convert.ChangeType(value, property.PropertyType);
-                property.SetValue(klass, value, null);
+                value = Convert.ChangeType(value, prop.PropertyType);
+                prop.SetValue(obj, value, null);
             }
 
-            return klass;
+            return obj;
         }
 
         /// <summary>
