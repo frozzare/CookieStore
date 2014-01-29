@@ -1,4 +1,4 @@
-# Nea
+# Cookie Store
 
 Had an idea I wanted to try with cookies in C#, *not for production use.*
 
@@ -11,7 +11,7 @@ public class User
     public string Name { get; set; }
 }
 
-var nea = new Nea();
+var store = new CookieStore();
 
 // Create a new user.
 var user = new User
@@ -21,14 +21,14 @@ var user = new User
 };
 
 // Save it and add some settings.
-nea.Save(user, new NeaCookie
+nea.Save(user, new CookieOptions
 {
     Expires = DateTime.Now.AddDays(1),
     HttpOnly = true
 });
 
 // Get the user from the cookie.
-user = nea.Get<User>();
+user = store.Get<User>();
 
 // Output the result.
 Response.Write(user.Name + " has id " + user.Id);
