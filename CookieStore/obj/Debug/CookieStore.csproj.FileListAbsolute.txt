@@ -1,0 +1,5 @@
+V:\cookiestore\CookieStore\bin\Debug\CookieStore.dll
+V:\cookiestore\CookieStore\bin\Debug\CookieStore.pdb
+V:\cookiestore\CookieStore\obj\Debug\CookieStore.csprojResolveAssemblyReference.cache
+V:\cookiestore\CookieStore\obj\Debug\CookieStore.dll
+V:\cookiestore\CookieStore\obj\Debug\CookieStore.pdb
