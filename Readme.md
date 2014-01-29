@@ -20,8 +20,8 @@ var user = new User
     Name = "Eleonor"
 };
 
-// Save it and add some settings.
-nea.Save(user, new CookieOptions
+// Save it and add some options.
+store.Save(user, new CookieOptions
 {
     Expires = DateTime.Now.AddDays(1),
     HttpOnly = true
