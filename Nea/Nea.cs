@@ -50,11 +50,20 @@ namespace Nea
         }
 
         /// <summary>
+        /// Save cookie without any options.
+        /// </summary>
+        /// <param name="obj">The class to use</param>
+        public void Save(object obj)
+        {
+            Save(obj, null);
+        }
+        
+        /// <summary>
         /// Set properties of the class to the cookie name value collection and save it. 
         /// </summary>
         /// <param name="obj">Instance of class</param>
         /// <param name="options">Cookie options</param>
-        public void Save (object obj, object options = null)
+        public void Save (object obj, object options)
         {
             var objType = obj.GetType();
             var cookie = new HttpCookie(objType.Name);
