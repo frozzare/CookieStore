@@ -27,7 +27,7 @@ namespace Nea
         /// </summary>
         /// <typeparam name="T">The class to use.</typeparam>
         /// <returns>Instance of the class with values if the cookie exists.</returns>
-        public T Get <T>() where T : new()
+        public T Get<T>() where T : new()
         {
             var obj = new T();
             var objType = obj.GetType();
@@ -98,8 +98,8 @@ namespace Nea
         /// <typeparam name="T">The class to use.</typeparam>
         public void Delete<T>() where T : new()
         {
-            var klass = new T();
-            var cookie = new HttpCookie(klass.GetType().Name)
+            var obj = new T();
+            var cookie = new HttpCookie(obj.GetType().Name)
             {
                 Expires = DateTime.Now.AddDays(-1d)
             };
