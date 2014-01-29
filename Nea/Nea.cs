@@ -33,7 +33,7 @@ namespace Nea
             var objType = obj.GetType();
             var cookie = HttpContext.Current.Request.Cookies[objType.Name];
 
-            if (cookie == null || cookie.Values.Count <= 0)
+            if (cookie == null || string.IsNullOrEmpty(cookie.Value) || cookie.Values.Count <= 0)
             {
                 return obj;
             }
