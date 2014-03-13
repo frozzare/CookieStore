@@ -36,6 +36,16 @@ namespace CookieStore
 
             return obj;
         }
+        
+        /// <summary>
+        /// Check if a cookie exists or not.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns>True or False</returns>
+        public static bool Exists<T>() where T : new()
+        {
+            return HttpContext.Current.Request.Cookies[new T().GetType().Name] != null;
+        }
 
         /// <summary>
         /// Save cookie without any options.
