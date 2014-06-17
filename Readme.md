@@ -1,6 +1,6 @@
 # Cookie Store
 
-Had an idea I wanted to try with cookies in C#, *not for production use.*
+Had an idea I wanted to try with cookies in C#.
 
 ## Example
 
