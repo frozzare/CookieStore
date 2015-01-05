@@ -35,3 +35,7 @@ Response.Write(user.Name + " has id " + user.Id);
 
 // Output: Eleonor has id 1
 ```
+
+# License
+
+MIT © [Fredrik Forsmo](https://github.com/frozzare)
